@@ -57,6 +57,15 @@ app.get('/download', (req, res) => {
     }
 });
 
+app.delete('/del', (req, res) => {
+    if (fs.existsSync(logFilePath)) {
+        fs.writeFileSync(logFilePath, ''); // Empty the file
+        res.send('All logs deleted successfully');
+    } else {
+        res.send('No logs found to delete');
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
