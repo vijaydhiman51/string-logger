@@ -1,18 +1,28 @@
 {
   "name": "string-logger",
   "version": "1.0.0",
+  "description": "A simple Express server for uploading photos, serving files, and logging text or JSON data.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "file-upload",
+    "logger",
+    "multer",
+    "api"
+  ],
+  "author": "VIJAY",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.2",
     "serve-index": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
